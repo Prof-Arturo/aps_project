@@ -82,7 +82,7 @@
             font-family: 'NationalPark', sans-serif;
             letter-spacing: 0.5px;
             display: block;
-            font-weight: normal; /* The font is naturally bold enough */
+            font-weight: normal;
             font-size: 18px;
             margin-bottom: 8px;
             color: var(--primary-color);
@@ -104,7 +104,6 @@
             border-radius: 4px;
             font-size: 16px;
             box-sizing: border-box; 
-            /* We keep the standard font inside inputs for readability */
             font-family: 'Segoe UI', sans-serif;
         }
 
@@ -137,7 +136,6 @@
             margin-bottom: 0;
             font-weight: 400;
             cursor: pointer;
-            /* Reset font size for options so they aren't huge */
             font-size: 16px; 
             font-family: 'Segoe UI', sans-serif; 
             color: #333;
@@ -179,7 +177,7 @@
         <h1>Washington State Periphenomenal Survey</h1>
         <h2>Experience Questionnaire</h2>
         <p><strong>Statement of Purpose:</strong> This research aims to systematically document anomalous human experiences—events that exist on the periphery of current scientific understanding. We are interested in documenting the event exactly as you perceived it. We are not here to judge the reality of your experience, but to create a comprehensive record.</p>
-        <p class="intro">All responses are strictly anonymous.</p>
+        <p class="intro">All responses are strictly anonymous unless you choose to provide contact information below.</p>
     </header>
 
     <form name="submit-to-google-sheet">
@@ -354,6 +352,20 @@
                 <div class="radio-item"><input type="radio" name="subj_theory" value="TECH" id="th_tech"><label for="th_tech">Technological / Simulated Reality</label></div>
                 <div class="radio-item"><input type="radio" name="subj_theory" value="UNK" id="th_unk"><label for="th_unk">Undecided</label></div>
             </div>
+        </div>
+
+        <h2>Part 6: Contact Information (Optional)</h2>
+
+        <div class="form-group">
+            <label for="contact_email">Email Address</label>
+            <p class="sub-label">Enter your email if you are open to being contacted for a follow-up interview.</p>
+            <input type="text" id="contact_email" name="contact_email" placeholder="name@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="contact_phone">Phone Number</label>
+            <p class="sub-label">Enter your phone number if you prefer to be contacted via text or call.</p>
+            <input type="text" id="contact_phone" name="contact_phone" placeholder="(555) 555-5555">
         </div>
 
         <button type="submit" class="submit-btn">Submit Experience Log</button>
