@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The American Periphenomenal Survey (Cascadia Division) is an academic registry systematically documenting anomalous human experiences in the Pacific Northwest.">
+    <meta name="keywords" content="Cascadia, Folklore, High Strangeness, Pacific Northwest, Liminal Spaces, APS, Periphenomenal">
+    <meta name="author" content="APS Directorate: Cascadia Division">
+    <meta name="geo.region" content="US-WA" />
+    <meta name="geo.placename" content="Cascadia Bioregion" />
+    
+    <title>🧭 American Periphenomenal Survey: Cascadia Division</title>
+    
+    <style>
+        /* APS STANDARD STYLESHEET (v2.0) */
+        @font-face {
+            font-family: 'NationalPark';
+            src: url('media/NationalPark-VariableVF.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --forest-green: #20441A;
+            --federal-gold: #D4AF37;
+            --canvas-cream: #F4EFE1;
+            --alert-red: #8B0000;
+        }
+
+        body {
+            background-color: var(--canvas-cream);
+            font-family: 'Courier New', Courier, monospace; /* Fallback for reports */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border: 2px solid var(--forest-green);
+            box-shadow: 10px 10px 0px rgba(32, 68, 26, 0.2);
+        }
+
+        /* BRANDING HEADER */
+        header {
+            text-align: center;
+            border-bottom: 4px double var(--forest-green);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        h1 {
+            font-family: 'NationalPark', sans-serif;
+            color: var(--forest-green);
+            font-size: 2.2rem;
+            margin: 10px 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-family: 'NationalPark', sans-serif;
+            font-size: 1.4rem;
+            color: #555;
+            margin-top: 0;
+            border-top: 1px solid #ccc;
+            display: inline-block;
+            padding-top: 5px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* FORM ELEMENTS */
+        .form-group {
+            margin-bottom: 25px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid var(--forest-green);
+        }
+
+        label {
+            display: block;
+            font-family: 'NationalPark', sans-serif;
+            font-size: 1.2rem;
+            color: var(--forest-green);
+            margin-bottom: 5px;
+        }
+
+        .sub-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        input[type="text"], 
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            background: #fff;
+            box-sizing: border-box; /* Fixes padding width issues */
+        }
+
+        button.submit-btn {
+            background-color: var(--forest-green);
+            color: white;
+            font-family: 'NationalPark', sans-serif;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button.submit-btn:hover {
+            background-color: #152e11;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #777;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .required { color: var(--alert-red); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="media/aps_cascadia_logo.svg" alt="APS Cascadia Division Patch" class="logo">
+        <h1>American Periphenomenal Survey</h1>
+        <h2>★ CASCADIA DIVISION ★</h2>
+    </header>
+
+    <div class="warning-box">
+        <strong>NOTICE:</strong> This digital instrument is authorized for data collection within the Cascadia Bioregion (WA, OR, ID, BC). Narrative data is archived for academic analysis.
+    </div>
+
+    <form id="aps-form">
+        
+        <div class="form-group">
+            <label>1. Age Group <span class="required">*</span></label>
+            <select id="age_group" name="age_group" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="18-25">18 - 25</option>
+                <option value="26-35">26 - 35</option>
+                <option value="36-45">36 - 45</option>
+                <option value="46-55">46 - 55</option>
+                <option value="56-65">56 - 65</option>
+                <option value="66+">66+</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>2. Gender Identity</label>
+            <input type="text" id="gender" name="gender" placeholder="e.g., Male, Female, Non-Binary, Prefer not to say">
+        </div>
+
+        <div class="form-group">
+            <label>3. Cultural/Spiritual Background</label>
+            <p class="sub-label">Does your upbringing influence how you view this event? (e.g., Catholic, Indigenous, Agnostic, Secular)</p>
+            <input type="text" id="cultural_bg" name="cultural_bg">
+        </div>
+
+        <div class="form-group">
+            <label>4. Occupation</label>
+            <p class="sub-label">What is your primary area of work? (e.g., Forestry, Tech, Service, Retired)</p>
+            <input type="text" id="occupation" name="occupation">
+        </div>
+
+        <hr>
+        
+        <div class="form-group">
+            <label>5. Location of Event (Bioregion) <span class="required">*</span></label>
+            <p class="sub-label">Where did the primary anomaly occur?</p>
+            <select id="location_state" name="location_state" required>
+                <option value="" disabled selected>Select Territory...</option>
+                <option value="WA">Washington State</option>
+                <option value="OR">Oregon</option>
+                <option value="ID">Idaho (Panhandle)</option>
+                <option value="BC">British Columbia</option>
+                <option value="NORCAL">Northern California</option>
+                <option value="OTHER">Other / Outside Jurisdiction</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>6. Specific Location</label>
+            <p class="sub-label">e.g., "Olympic National Forest, near the Hoh River trail" or "Downtown Seattle, 3rd & Pike"</p>
+            <input type="text" id="location_specific" name="location_specific">
+        </div>
+
+        <div class="form-group">
+            <label>7. Narrative Description <span class="required">*</span></label>
+            <p class="sub-label">Please describe the event in your own words. Focus on sensory details (what you saw, heard, felt).</p>
+            <textarea id="narrative" name="narrative" rows="10" required></textarea>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label>8. Attribution (Your Theory)</label>
+            <p class="sub-label">At the time, what did you think was happening? Has your opinion changed since?</p>
+            <textarea id="attribution" name="attribution" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>9. Contact Info (Optional)</label>
+            <p class="sub-label">If you are willing to be contacted by a Field Researcher for a follow-up interview.</p>
+            <input type="text" id="contact_info" name="contact_info" placeholder="Email or Phone">
+        </div>
+
+        <button type="submit" class="submit-btn">SUBMIT TO REGISTRY</button>
+
+    </form>
+
+    <div id="status-message" style="display:none; text-align:center; margin-top:20px; font-weight:bold; color:var(--forest-green);"></div>
+
+    <footer>
+        <p><strong>American Periphenomenal Survey | Cascadia Division</strong><br>
+        Methodological Agnosticism Observed.<br>
+        <a href="privacy.html">Privacy Policy</a> | EST. 2025</p>
+    </footer>
+</div>
+
+<script>
+    // JAVASCRIPT TO CONNECT TO GOOGLE SHEET
+    // REPLACE THE URL BELOW WITH YOUR GOOGLE APPS SCRIPT DEPLOYMENT URL
+    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+    
+    const form = document.forms['aps-form'];
+    const statusMsg = document.getElementById('status-message');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        statusMsg.style.display = 'block';
+        statusMsg.innerHTML = 'Transmitting to Cascadia Registry...';
+        
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            statusMsg.innerHTML = '✅ Data Logged. Thank you for your contribution to the Survey.';
+            form.reset();
+        })
+        .catch(error => {
+            statusMsg.style.color = 'red';
+            statusMsg.innerHTML = '❌ Transmission Error. Please try again.';
+            console.error('Error!', error.message);
+        });
+    });
+</script>
+
+</body>
+</html>
