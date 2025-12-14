@@ -1,0 +1,34 @@
+APS DEPLOYMENT PROTOCOL: CASCADIA DIVISION (SOLO-OP)
+====================================================
+STATUS: ACTIVE
+OPERATOR: [YOUR NAME]
+REGION: US-WA / US-OR / CA-BC
+
+[PHASE 1: STATIONING]
+1. Verify /aps_online/ directory is live on GitHub Pages.
+2. Verify "aps_cascadia_logo.svg" loads correctly on mobile.
+3. Test Form Logic: Submit a test entry with location "WA".
+   - Check Google Sheet for "CAS-XXXX" ID generation.
+   - Check Google Sheet for correct column mapping.
+
+[PHASE 2: PASSIVE RECRUITMENT]
+(Do not actively canvass. Let the data find you.)
+1. Print 20 "Field Asset" Stickers (QR Code to Website).
+2. Deployment Targets (One per week):
+   - [ ] Ferry Terminal (Seattle/Bremerton)
+   - [ ] Trailhead (I-90 Corridor)
+   - [ ] University District (Bulletin Board)
+   - [ ] Rural Gas Station (Highway 2)
+
+[PHASE 3: WEEKLY TRIAGE]
+(The "Friday Rule": Only check data once per week.)
+1. Open APS_Cascadia_Log.
+2. Filter Column F (Location): Hide "OTHER".
+3. Filter Word Count: Hide < 50 words.
+4. Assign Category (A-E) to valid narratives.
+5. Close Log.
+
+[PHASE 4: EXPANSION]
+If > 50 entries/week:
+1. Recruit "Junior Analyst" (Friend/Volunteer).
+2. Grant "View Only" access to Sheet.
