@@ -1,0 +1,30 @@
+=========================================================================
+APS BIBLIOGRAPHY MASTER INDEX
+Division: Cascadia (Region 10) | Status: Reference
+=========================================================================
+
+🗃️ MISSION CATEGORY INDEX
+
+The following index maps the specialized bibliographies in the /library/ 
+directory to their corresponding "Mission Categories" (Phenomenological Types).
+
+-------------------------------------------------------------------------
+| BIBLIOGRAPHY FILE             | CAT CODE | FOCUS AREA                 |
+|-------------------------------|----------|----------------------------|
+| APS_Biblio_Methodology.pdf    | MAIN     | Methodological Agnosticism |
+| APS_Biblio_Liminality.pdf     | A        | Space & Architecture       |
+| APS_Biblio_SleepStates.pdf    | A, C     | Physiology (Night Assault) |
+| APS_Biblio_HighStrangeness.pdf| E, C     | UAP, Lights & Orbs         |
+| APS_Biblio_TechnoAnimism.pdf  | A, E     | Simulation Theory & AI     |
+| APS_Biblio_Cryptozoology.pdf  | D        | Nature & Biology           |
+-------------------------------------------------------------------------
+
+
+[CODE LEGEND]
+A = Liminal / Spatial Anomalies (The Environment)
+C = Corporeal / Physiological Effects (The Body)
+D = Biological / Cryptid Entities (The Organism)
+E = Energetic / Aerial Phenomena (The Signal)
+
+=========================================================================
+Property of the APS Directorate.
