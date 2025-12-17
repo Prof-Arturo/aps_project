@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The American Periphenomenal Survey (Cascadia Division) is an academic registry systematically documenting anomalous human experiences in the Pacific Northwest.">
-    <meta name="keywords" content="Cascadia, Folklore, High Strangeness, Pacific Northwest, Liminal Spaces, APS, Periphenomenal">
+    
+    <meta name="description" content="The American Periphenomenal Survey (Cascadia Division) is an academic registry systematically documenting anomalous human experiences in the Pacific Northwest (WA, OR, ID, BC, AK, NorCal).">
+    <meta name="keywords" content="Cascadia, Folklore, High Strangeness, Pacific Northwest, Liminal Spaces, APS, Periphenomenal, Sasquatch, UAP">
     <meta name="author" content="APS Directorate: Cascadia Division">
+    <meta name="robots" content="index, follow">
+    
     <meta name="geo.region" content="US-WA" />
     <meta name="geo.placename" content="Cascadia Bioregion" />
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="APS Cascadia: Report an Anomaly">
+    <meta property="og:description" content="Secure, anonymous reporting for unexplained phenomena in the Pacific Northwest. Help us map the unknown.">
+    <meta property="og:image" content="media/aps_cascadia_logo.svg">
+    <meta property="og:url" content="https://[yourusername].github.io/aps_project/">
     
     <title>🧭 American Periphenomenal Survey: Cascadia Division</title>
     <link rel="icon" type="image/png" href="media/favicon.png">
@@ -166,7 +175,7 @@
     </header>
 
     <div class="warning-box">
-        <strong>NOTICE:</strong> This digital instrument is authorized for data collection within the Cascadia Bioregion (WA, OR, ID, BC). Narrative data is archived for academic analysis.
+        <strong>NOTICE:</strong> This digital instrument is authorized for data collection within the Cascadia Bioregion (WA, OR, ID, BC, AK, NorCal). Narrative data is archived for academic analysis.
     </div>
 
     <form id="aps-form">
@@ -206,7 +215,6 @@
         <div class="form-group">
             <label>5. Location of Event (Bioregion) <span class="required">*</span></label>
             <p class="sub-label">Where did the primary anomaly occur?</p>
-            <label for="location_state">State / Province:</label>
             <select id="location_state" name="location_state" required>
                 <option value="" disabled selected>-- Select Jurisdiction --</option>
                 <option value="WA">Washington</option>
@@ -260,7 +268,7 @@
 
 <script>
     // JAVASCRIPT TO CONNECT TO GOOGLE SHEET
-    // REPLACE THE URL BELOW WITH YOUR GOOGLE APPS SCRIPT DEPLOYMENT URL
+    // IMPORTANT: REPLACE THE URL BELOW WITH YOUR GOOGLE APPS SCRIPT DEPLOYMENT URL
     const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
     
     const form = document.forms['aps-form'];
