@@ -13,9 +13,9 @@ directory to their corresponding "Mission Categories" (Phenomenological Types).
 |-------------------------------|----------|----------------------------|
 | APS_Biblio_Methodology.pdf    | MAIN     | Methodological Agnosticism |
 | APS_Biblio_Liminality.pdf     | A        | Space & Architecture       |
-| APS_Biblio_SleepStates.pdf    | A, C     | Physiology (Night Assault) |
+| APS_Biblio_NightAssault.pdf   | A, C     | Physiology (Night Assault) |
 | APS_Biblio_HighStrangeness.pdf| E, C     | UAP, Lights & Orbs         |
-| APS_Biblio_TechnoAnimism.pdf  | A, E     | Simulation Theory & AI     |
+| APS_Biblio_Simulation.pdf     | A, E     | Simulation Theory & AI     |
 | APS_Biblio_Cryptozoology.pdf  | D        | Nature & Biology           |
 -------------------------------------------------------------------------
 
