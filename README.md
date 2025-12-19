@@ -7,8 +7,8 @@
 ## 🔐 Division Access
 *Authorized Field Researchers Only*
 
-* **[>> 📊 Access Cascadia Data Log](PASTE_YOUR_GOOGLE_SHEET_LINK_HERE)**
-* **[>> 🌐 Launch Division Interface](https://[yourusername].github.io/aps_project/aps_online/)**
+* **[>> 📊 Access Cascadia Data Log](https://docs.google.com/spreadsheets/d/1FYre5TV6QuT-pY58apgDjkniJb1nM4l7JfQUO5IcXXc/edit?usp=sharing)**
+* **[>> 🌐 Launch Division Interface](https://Prof-Arturo.github.io/aps_project/aps_online/)**
 
 ---
 
@@ -41,7 +41,7 @@
 * `aps_qr_code.svg` _(Vector Scan Code)_
 
 #### **`/registry_data/`** (Archival)
-* `APS_Master_Data_Dictionary.pdf` _(Coding Definitions)_
+* `APS_Master_Data_Dictionary.pdf` _(Coding Definitions v3.1)_
 * `APS_Master_Coding_Sheet.pdf` _(Analyst Cheat Sheet)_
 * `APS_Data_Log_Schema.pdf` _(Database Structure)_
 * `APS_Cascadia_Log.csv` _(Master Database)_
