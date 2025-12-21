@@ -8,7 +8,7 @@
 *Authorized Field Researchers Only*
 
 * **[>> 📊 Access Cascadia Data Log](https://docs.google.com/spreadsheets/d/1FYre5TV6QuT-pY58apgDjkniJb1nM4l7JfQUO5IcXXc/edit?usp=sharing)**
-* **[>> 🌐 Launch Division Interface](https://Prof-Arturo.github.io/aps_project/aps_online/)**
+* **[>> 🌐 Launch Division Interface](https://Prof-Arturo.github.io/aps_project/)**
 
 ---
 
