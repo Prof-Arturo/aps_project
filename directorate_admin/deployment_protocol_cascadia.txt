@@ -92,4 +92,5 @@ In the event of compromise or project termination:
 3. Shred all physical Clipboard forms containing PII.
 
 =========================================================================
-END OF LINE.
+
+
