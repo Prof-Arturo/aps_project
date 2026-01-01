@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="o9NBd_Uevi-sZpgFxlUVIoizEUV0e9uKXqdYnhPCVEY" />
+    <meta name="google-site-verification" content="iGbcfhkSJAe4cD_pK-h6EN76CEOML0UZepeNSQ1M43I" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -20,19 +20,10 @@
     <meta property="og:url" content="https://www.aps-project.org/">
     
     <title>🧭 American Periphenomenal Survey: Cascadia Division</title>
-    <meta name="description" content="The American Periphenomenal Survey (Cascadia Division) is an academic registry systematically documenting anomalous human experiences, cryptids, and liminal events in the Pacific Northwest (WA, OR, ID, BC, AK).">
-    <meta name="keywords" content="Cascadia, Bioregion, Bigfoot, Sasquatch, High Strangeness, Liminal Spaces, Glitch in the Matrix, Academic Survey, Pacific Northwest, Region 10">
-    <meta name="author" content="APS Directorate: Region 10">
-    <meta name="robots" content="index, follow">
-   
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="APS Cascadia: Report an Anomaly">
-    <meta property="og:description" content="Secure, anonymous reporting for unexplained phenomena in the Pacific Northwest. Help us map the unknown.">
-    <meta property="og:image" content="media/aps_cascadia_logo.svg">
     <link rel="icon" type="image/png" href="media/favicon.png">
     
     <style>
-        /* APS STANDARD STYLESHEET (v2.0) */
+        /* APS STANDARD STYLESHEET (v2.1) */
         @font-face {
             font-family: 'NationalPark';
             src: url('media/NationalPark-VariableVF.ttf') format('truetype');
@@ -144,6 +135,21 @@
             font-size: 1rem;
             background: #fff;
             box-sizing: border-box; /* Fixes padding width issues */
+        }
+
+        /* Checkbox styling within radio groups */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .radio-option input {
+            margin-top: 5px;
         }
 
         button.submit-btn {
@@ -313,6 +319,26 @@
             <label>9. Contact Info (Optional)</label>
             <p class="sub-label">If you are willing to be contacted by a Field Researcher for a follow-up interview.</p>
             <input type="text" id="contact_info" name="contact_info" placeholder="Email or Phone">
+        </div>
+
+        <div class="form-group" style="border-left: 5px solid var(--federal-gold);">
+            <label>10. Data Permission Level <span class="required">*</span></label>
+            <p class="sub-label">How may we use your report in the future?</p>
+            
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="perm_publish" name="permission_level" value="PUBLISH_ANON" required>
+                    <label for="perm_publish" style="font-weight:normal; font-size:0.95rem;">
+                        <strong>Full Archive (Recommended):</strong> I authorize APS to include my anonymous narrative in the public online registry so others can learn from it. (All personal details remain hidden).
+                    </label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="perm_private" name="permission_level" value="PRIVATE_DATA">
+                    <label for="perm_private" style="font-weight:normal; font-size:0.95rem;">
+                        <strong>Data Only:</strong> Use my report for internal statistical analysis and mapping only. Do not publish my text narrative.
+                    </label>
+                </div>
+            </div>
         </div>
 
         <button type="submit" class="submit-btn">SUBMIT TO REGISTRY</button>
