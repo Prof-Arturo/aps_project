@@ -42,6 +42,7 @@ aps_project/
 │   ├── aps_cascadia_qr.svg
 │   └── favicon.png
 ├── privacy.html
+├── registry.html
 └── registry_data/
     ├── APS_Cascadia_Log.csv
     ├── APS_Data_Log_Schema.pdf
