@@ -156,8 +156,8 @@
 
 <script>
     // --- CONFIGURATION ---
-    // PASTE YOUR PUBLISHED CSV URL HERE
-    const sheet_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRpL2q_JAf_vIdWYrbN3hQ8Bypm0ihsOT5BWYOXnnbA1GYjXOV_Ftk9YRSKXJBnv7hgduSjHWMIeWoG/pub?gid=1871137459&single=true&output=csv';
+    // Keep your existing URL with the single quotes
+    const sheet_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRpL2q_JAf_vIdWYrbN3hQ8Bypm0ihsOT5BWYOXnnbA1GYjXOV_Ftk9YRSKXJBnv7hgduSjHWMIeWoG/pub?gid=1871137459&single=true&output=csv'; 
 
     // --- LOGIC ---
     async function fetchRegistry() {
@@ -165,31 +165,31 @@
             const response = await fetch(sheet_csv_url);
             const data = await response.text();
             
-            // Parse CSV (Simple Parser)
-            const rows = data.split('\n').slice(1); // Remove header row
+            // ROBUST CSV PARSER (Handles newlines and commas inside quotes)
+            const rows = parseCSV(data);
+            
             const tableBody = document.getElementById('tableBody');
             tableBody.innerHTML = ''; // Clear loading message
 
-            rows.forEach(row => {
-                // Split by comma, handling quotes roughly (robust parsing is complex, this is "good enough" for simple text)
-                // Note: If narratives contain commas, this simple split might break. 
-                // A regex split is safer:
-                const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+            // Skip Header Row (Index 0)
+            for (let i = 1; i < rows.length; i++) {
+                const cols = rows[i];
                 
-                if (cols.length > 2) { // Ensure row has data
+                // Ensure row has enough data (cols length matches your QUERY selection count)
+                if (cols.length >= 4) { 
                     const tr = document.createElement('tr');
                     
-                    // CLEANUP DATA (Remove quotes)
-                    const clean = (text) => text ? text.replace(/^"|"$/g, '') : '';
+                    // MAPPING (Based on your QUERY: Select A, B, W, AO)
+                    // Col 0 = Timestamp (A)
+                    // Col 1 = Log ID (B)
+                    // Col 2 = Narrative (W)
+                    // Col 3 = Location Specific (AO)
+
+                    const date = cols[0].split(' ')[0]; // Just the date
+                    const id = cols[1];
+                    const narrative = cols[2]; 
+                    const loc = cols[3];
                     
-                    // MAPPING (Adjust indices based on your QUERY order)
-                    // Assuming QUERY order: Timestamp(0), ID(1), Narrative(2), Loc(3), Flags...
-                    const id = clean(cols[1]);
-                    const date = clean(cols[0]).split(' ')[0]; // Just the date part
-                    const narrative = clean(cols[2]); 
-                    const loc = clean(cols[3]);
-                    
-                    // Simple HTML Construction
                     tr.innerHTML = `
                         <td class="col-id">${id}</td>
                         <td class="col-date">${date}</td>
@@ -198,12 +198,42 @@
                     `;
                     tableBody.appendChild(tr);
                 }
-            });
+            }
 
         } catch (error) {
             console.error('Error:', error);
             document.getElementById('tableBody').innerHTML = '<tr><td colspan="4">Error loading archive. System offline.</td></tr>';
         }
+    }
+
+    // --- HELPER: CSV PARSER ---
+    // This handles "quoted text, with commas" and multiline entries
+    function parseCSV(str) {
+        const arr = [];
+        let quote = false;  // 'true' means we're inside a quoted field
+        let row = 0, col = 0, c = 0;
+
+        for (; c < str.length; c++) {
+            let cc = str[c], nc = str[c + 1];        // Current char, Next char
+            arr[row] = arr[row] || [];             // Create a new row if needed
+            arr[row][col] = arr[row][col] || '';   // Create a new column if needed
+
+            // If the current character is a quote
+            if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; } // Handle escaped quotes ("")
+            if (cc == '"') { quote = !quote; continue; }
+
+            // If comma (and not inside quotes) -> Next Column
+            if (cc == ',' && !quote) { ++col; continue; }
+
+            // If newline (and not inside quotes) -> Next Row
+            if (cc == '\r' && nc == '\n' && !quote) { ++row; col = 0; ++c; continue; }
+            if (cc == '\n' && !quote) { ++row; col = 0; continue; }
+            if (cc == '\r' && !quote) { ++row; col = 0; continue; }
+
+            // Otherwise, add the character to the current cell
+            arr[row][col] += cc;
+        }
+        return arr;
     }
 
     // --- SEARCH FILTER ---
@@ -213,9 +243,9 @@
         const table = document.getElementById("dataTable");
         const tr = table.getElementsByTagName("tr");
 
-        for (let i = 1; i < tr.length; i++) {
-            let txtValue = tr[i].textContent || tr[i].innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        for (let i = 0; i < tr.length; i++) { // Loop through data rows
+            let text = tr[i].textContent || tr[i].innerText;
+            if (text.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
@@ -225,8 +255,6 @@
 
     // Load data on page load
     fetchRegistry();
-
 </script>
-
 </body>
 </html>
