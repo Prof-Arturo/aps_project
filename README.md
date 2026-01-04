@@ -18,6 +18,7 @@
 * `CNAME` _(Domain Configuration)_
 * `index.html` _(Primary Questionnaire)_
 * `privacy.html` _(Compliance)_
+*  `registry.html` _(Public Registry)_
 * **`/media/` (Web Assets)**
     * `aps_cascadia_logo.svg` _(Web Optimized)_
     * `aps_cascadia_qr.svg` _(Web Optimized)_
