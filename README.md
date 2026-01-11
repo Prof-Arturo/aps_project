@@ -30,7 +30,7 @@
 #### **`/directorate_admin/`** (Governance)
 * `APS Business Card back.pdf` _(Print Asset)_
 * `APS Business Card front.pdf` _(Print Asset)_
-* `APS_Mission_Statement_Cascadia.pdf` _(Regional Mandate)_
+* `APS_Mission_Statement_Cascadia_v2.pdf` _(Regional Mandate v2)_
 * `APS_Operations_Manual_Reg10.pdf` _(Consolidated SOP & Hierarchy)_
 * `APS_Project_Manifest.pdf` _(Master Inventory)_
 * `APS_Strategic_Launch_Plan.txt` _(Master Strategy)_
@@ -48,13 +48,12 @@
 
 #### **`/field_kits/`** (Acquisition Tools)
 * `APS QR Stickers_v2.pdf` _(Sticker Assets)_
-* `APS_Debriefing_Protocol.pdf` _(Exit Script)_
+* `APS_Debriefing_Protocol_Training.pdf` _(Exit Script & Training)_
 * `APS_Field_Instrument_Reg10.pdf` _(Clipboard Form)_
 * `APS_Field_Manual_Reg10.pdf` _(Researcher Guide)_
-* `APS_Field_Ops_Protocol.txt` _(Tactical Instructions)_
+* `APS_Field_Manual_Reg10_booklet.pdf` _(Print-ready Booklet)_
 * `APS_Field_Questionnaire.pdf` _(Offline Backup)_
 * `APS_Recruitment_Flyer.pdf` _(Passive Intake)_
-* `APS_Resource_Card_Cascadia.docx` _(Editable Handout)_
 * `APS_Resource_Card_Cascadia.pdf` _(Safety Handout)_
 * `APS_Target_List_NorthSeattle.pdf` _(Tactical Targets)_
 * `aps_cascadia_qr inverted.svg` _(Inverted Vector Scan Code)_
@@ -63,6 +62,7 @@
 #### **`/registry_data/`** (Archival)
 * `APS_Cascadia_Log.csv` _(Master Database - CSV)_
 * `APS_Cascadia_Log.xlsx` _(Master Database - Excel)_
+* `APS_Cascadia_Log_master_headers.csv` _(Schema Template)_
 * `APS_Master_Data_Protocol.pdf` _(Master Schema & Definitions v3.0)_
 * `aps_intake_script.js` _(Backend Logic Backup)_
 * **`/APS_Cascadia_Log_Backups/` (Snapshots)**
